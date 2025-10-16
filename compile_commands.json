@@ -1,0 +1,74 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-c",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-ObjC++",
+      "-fobjc-arc",
+      "-Iinclude",
+      "-framework",
+      "Metal",
+      "-framework",
+      "QuartzCore",
+      "-framework",
+      "Foundation",
+      "-o",
+      "LGEngine",
+      "src/main.mm"
+    ],
+    "directory": "/Users/lucamazza/projects/lg_engine",
+    "file": "/Users/lucamazza/projects/lg_engine/src/main.mm",
+    "output": "/Users/lucamazza/projects/lg_engine/LGEngine"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-c",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-ObjC++",
+      "-fobjc-arc",
+      "-Iinclude",
+      "-framework",
+      "Metal",
+      "-framework",
+      "QuartzCore",
+      "-framework",
+      "Foundation",
+      "-o",
+      "LGEngine",
+      "src/Engine.cpp"
+    ],
+    "directory": "/Users/lucamazza/projects/lg_engine",
+    "file": "/Users/lucamazza/projects/lg_engine/src/Engine.cpp",
+    "output": "/Users/lucamazza/projects/lg_engine/LGEngine"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-c",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-ObjC++",
+      "-fobjc-arc",
+      "-Iinclude",
+      "-framework",
+      "Metal",
+      "-framework",
+      "QuartzCore",
+      "-framework",
+      "Foundation",
+      "-o",
+      "LGEngine",
+      "src/MetalRenderer.mm"
+    ],
+    "directory": "/Users/lucamazza/projects/lg_engine",
+    "file": "/Users/lucamazza/projects/lg_engine/src/MetalRenderer.mm",
+    "output": "/Users/lucamazza/projects/lg_engine/LGEngine"
+  }
+]
