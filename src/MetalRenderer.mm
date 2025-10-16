@@ -3,19 +3,19 @@
 
 #include <iostream>
 
-#include "MetalRenderer.h"
-#include "Engine.h"
-#include "Common.h"
+#include "metal_renderer.h"
+#include "engine.h"
+#include "common.h"
 
-LIB_API MetalRenderer::MetalRenderer() {
+ENG_API MetalRenderer::MetalRenderer() {
     DEBUG("MetalRenderer Initialized");
 }
 
-LIB_API MetalRenderer::~MetalRenderer() {
+ENG_API MetalRenderer::~MetalRenderer() {
     DEBUG("MetalRenderer Destroyed");
 }
 
-void LIB_API MetalRenderer::run(Engine *engine) {
+void ENG_API MetalRenderer::run(Engine *engine) {
     id<MTLDevice> device = MTLCreateSystemDefaultDevice();
     if (!device) {
         ERROR("Metal is not supported on this device");

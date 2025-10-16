@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Common.h"
+#include "common.h"
 
 class Engine;
 
-class LIB_API MetalRenderer {
+class ENG_API MetalRenderer {
 public:
     MetalRenderer();
     ~MetalRenderer();

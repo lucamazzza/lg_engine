@@ -6,11 +6,12 @@
 
 #define NDEBUG
 
-#if defined(__APPLE__)
+#ifdef __APPLE__
 #define PLATFORM_APPLE
+#define _METAL
 #endif
 
-#if defined(__MACH__)
+#ifdef __MACH__
 #define PLATFORM_MACOS
 #endif
 
@@ -32,17 +33,25 @@
         } \
     } while (0)
 
-#define UNUSED(x) (void)(x)
+#define UNUSED(x)           (void)(x)
 
 #define ENGINE_VERSION_MAJOR 1
 #define ENGINE_VERSION_MINOR 0
 #define ENGINE_VERSION_PATCH 0
 #define ENGINE_VERSION_STRING "1.0.0"
 
-#if defined(__GNUC__) || defined(__clang__)
-#define LIB_API __attribute__((visibility("default")))
-#define LIB_PRV __attribute__((visibility("hidden")))
+#ifdef _WINDOWS
+#define _OPENGL
+#ifdef ENGINE_EXPORTS
+#define ENG_API __declspec(dllexport)
 #else
-#define LIB_API
-#define LIB_PRV
+#define ENG_API __declspec(dllimport)
+#endif      
+#pragma warning(disable : 4251) 
+#define ENG_PRV
+#else
+#if defined(__GNUC__) || defined(__clang__)
+#define ENG_API             __attribute__((visibility("default")))
+#define ENG_PRV             __attribute__((visibility("hidden")))
+#endif
 #endif
