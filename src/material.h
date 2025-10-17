@@ -22,6 +22,12 @@ class ENG_API Material : public Object {
 public:
 	Material();
 	void render(const glm::mat4 world_matrix) const override;
+    glm::vec3 get_emission_color(void) const;
+    glm::vec3 get_ambient_color(void) const;
+    glm::vec3 get_diffuse_color(void) const ;
+    glm::vec3 get_specular_color(void) const;
+    float get_shininess(void) const;
+    std::shared_ptr<Texture> get_texture(void) const;
 	void set_emission_color(const glm::vec3 color);
 	void set_ambient_color(const glm::vec3 color);
 	void set_diffuse_color(const glm::vec3 color);

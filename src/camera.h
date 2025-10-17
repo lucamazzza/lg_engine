@@ -25,6 +25,8 @@ public:
 	void set_fov(const float fov);
 	void set_clipping(const float near_clipping, const float far_clipping);
 	void set_active(const bool is_active);
+    glm::mat4 get_view_matrix() const;
+    virtual glm::mat4 get_projection_matrix() const = 0;
 protected:
 	float fov;
 	float near_clipping;
